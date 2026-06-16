@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mejora tu inglés — Sugerencias por registro</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Mejora tu forma de escribir en inglés</h1>
+        <p class="subtitle">
+          Escribe lo que quieres expresar y recibe sugerencias en distintos
+          registros, cada una con su explicación.
+        </p>
+      </header>
+
+      <form id="suggest-form" novalidate>
+        <label for="phrase">Tu palabra o frase</label>
+        <textarea
+          id="phrase"
+          name="phrase"
+          rows="3"
+          placeholder="Ej.: I want to know if you can come to the meeting"
+        ></textarea>
+
+        <label for="context">Contexto (opcional)</label>
+        <input
+          id="context"
+          name="context"
+          type="text"
+          placeholder="Ej.: correo formal a mi jefe"
+        />
+
+        <button type="submit" id="submit-btn">Obtener sugerencias</button>
+      </form>
+
+      <p id="form-message" class="message" role="alert" hidden></p>
+      <p id="loading" class="loading" role="status" hidden>Generando sugerencias…</p>
+      <p id="spanish-note" class="spanish-note" hidden></p>
+
+      <section id="results" class="results" aria-live="polite"></section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
